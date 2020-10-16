@@ -127,7 +127,7 @@ ul.education li::before {
 }
 
 .skills {
-    width: 100%;
+    width: 50%;
     padding: 20px;
     box-sizing: border-box;
 }
@@ -394,6 +394,10 @@ footer a:hover {
     }
 
     .cert {
+        width: 100%;
+    }
+
+    .skills {
         width: 100%;
     }
 
