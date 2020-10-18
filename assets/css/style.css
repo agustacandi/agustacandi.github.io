@@ -26,6 +26,13 @@ h2 {
     padding: 20px 0;
     background-color: #faeee7;
     border-radius: 10px;
+    overflow: hidden;
+}
+
+.top div {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all 1s;
 }
 
 .top .pic {
@@ -45,22 +52,29 @@ span.hash {
     font-size: 30px;
 }
 
-ul.education {
-    list-style: none;
-}
-
 span.bp {
     font-weight: 700;
     color: #33272a;
 }
 
-ul.education li::before {
-    content: "\2022";
-    color: #33272a;
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
+ul.expp li {
+    list-style-type: square;
+}
+
+#about {
+    overflow: hidden;
+}
+
+#about h2 {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all 1s;
+}
+
+#about p {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all 1s;
 }
 
 .content {
@@ -78,8 +92,14 @@ ul.education li::before {
     text-align: justify;
 }
 
-.certificate {
+#certificate {
     overflow: auto;
+}
+
+#certificate h2 {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
 }
 
 .certi {
@@ -94,7 +114,10 @@ ul.education li::before {
     color: #33272a;
     border-radius: 10px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all .5s;
 }
 
 .cert img {
@@ -103,10 +126,6 @@ ul.education li::before {
 
 .cert p {
     text-align: center;
-}
-
-#cert-title {
-    margin-bottom: 20px;
 }
 
 .more-btn {
@@ -118,6 +137,20 @@ ul.education li::before {
     background-color: #ff8ba7;
     text-decoration: none;
     float: right;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
+}
+
+#skills {
+    overflow: hidden;
+}
+
+#skills h2 {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
 }
 
 .skill {
@@ -132,19 +165,31 @@ ul.education li::before {
     box-sizing: border-box;
 }
 
+.skill-title {
+    opacity: 0;
+    transition: all .5s;
+}
+
+.skill-value {
+    opacity: 0;
+    transition: all .5s;
+}
+
 .progress {
     display: flex;
     align-items: center;
 }
 
 .progress .bar {
-    width: 100%;
+    width: 0%;
+    opacity: 0;
     height: 25px;
     margin-right: 10px;
     border: 10px solid #34495e;
     background-color: #34495e;
     position: relative;
     border-radius: 25px;
+    transition: all .5s;
 }
 
 .bar-bar {
@@ -152,30 +197,47 @@ ul.education li::before {
     background-color: #ff8ba7;
     position: absolute;
     border-radius: 25px;
+    transition: all .5s;
 }
 
 .javascript {
-    width: 40%;
+    width: 0%;
 }
 
 .python {
-    width: 35%;
+    width: 0%;
 }
 
 .php {
-    width: 30%;
+    width: 0%;
 }
 
 .react {
-    width: 10%;
+    width: 0%;
 }
 
 .cpp {
-    width: 10%;
+    width: 0%;
 }
 
 .node {
-    width: 5%;
+    width: 0%;
+}
+
+#experiences {
+    overflow: hidden;
+}
+
+#experiences h2 {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
+}
+
+#experiences .exp {
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all .5s;
 }
 
 .progress p {
@@ -198,6 +260,14 @@ ul.education li::before {
     margin-bottom: 20px;
     border-radius: 10px;
     overflow: hidden;
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all .5s;
+}
+
+.show {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 #project {
@@ -206,6 +276,9 @@ ul.education li::before {
 
 #project-title {
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
 }
 
 .project-item {
@@ -267,6 +340,11 @@ ul.education li::before {
     color: #33272a;
 }
 
+.view-more a {
+    color: #33272a;
+    text-decoration: none;
+}
+
 .item-bottom-left {
     position: absolute;
     bottom: -100px;
@@ -312,6 +390,7 @@ ul.education li::before {
 
 .title {
     color: #33272a;
+    font-weight: 600;
 }
 
 .project-rg-itm {
@@ -323,6 +402,16 @@ ul.education li::before {
     text-align: center;
 }
 
+#contact {
+    overflow: hidden;
+}
+
+#contact h2 {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
+}
+
 .contact-me {
     display: flex;
     flex-wrap: wrap;
@@ -330,6 +419,9 @@ ul.education li::before {
 
 .contact-item {
     width: 50%;
+    opacity: 0;
+    transform: translate(0, 50px);
+    transition: all .5s;
 }
 
 .contact-item ul {
@@ -364,6 +456,9 @@ footer {
 footer p {
     line-height: 50px;
     margin: 0;
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: all .5s;
 }
 
 footer a {
