@@ -470,6 +470,48 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.modal {
+    display: none;
+}
+
+.blur {
+    width: 100%;
+    height: 100%;
+    background-color: #33272a;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.discord-modal {
+    width: 395px;
+    background-color: #faeee7;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+.discord-modal span {
+    font-size: 25px;
+    color: #33272a;
+    cursor: pointer;
+}
+
+.discord-modal img {
+    width: 100%;
+}
+
+.discord-modal p {
+    margin: 0;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
     .container {
         width: 100%;
@@ -510,5 +552,44 @@ footer a:hover {
 
     .contact-item ul li {
         margin-right: 10px;
+    }
+
+    .discord-modal {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1500px) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .project-item {
+        height: 400px;
+    }
+
+    .project-hover {
+        height: 400px;
+    }
+
+    .exp li {
+        font-size: 1.5rem;
+    }
+
+    .discord-modal {
+        width: 600px;
+    }
+
+    .discord-modal span {
+        font-size: 40px;
     }
 }

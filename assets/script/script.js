@@ -1,3 +1,55 @@
+if(innerWidth > 1366) {
+    $(window).on('load', () => {
+        // Profile
+        $('.top div').css({
+            'opacity': '1',
+            'transform': 'translate(0,0)'
+        })
+        // about
+        $('#about h2').css({
+            'opacity': '1',
+            'transform': 'translate(0,0)'
+        })
+        $('#about p').css({
+            'opacity': '1',
+            'transform': 'translate(0,0)'
+        })
+        // Certificate
+        $('#certificate h2').css({
+            'opacity': '1',
+            'transform': 'translate(0,0)'
+        })
+        $('.cert').each(function(i) {
+            setTimeout(function() {
+                $('.cert').eq(i).addClass('show');
+            }, 300 * (i + 1));
+        });
+        setTimeout(() => {
+            $('.more-btn').css({
+                'opacity': '1',
+                'transform': 'translate(0,0)'
+            })
+        }, 1000)
+    })
+    $(window).scroll(() => {
+        const wScroll = $(this).scrollTop();
+        if (wScroll > $('#contact').offset().top - 420) {
+            $('#contact h2').css({
+                'opacity': '1',
+                'transform': 'translate(0,0)'
+            })
+            $('.contact-item').css({
+                'opacity': '1',
+                'transform': 'translate(0,0)'
+            })
+            $('footer p').css({
+                'opacity': '1',
+                'transform': 'translate(0,0)'
+            })
+        };
+    })
+} 
+
 $(window).on('load', () => {
     // profile
     $('.top div').css({
@@ -115,11 +167,18 @@ $(window).scroll(function() {
             'opacity': '1',
             'transform': 'translate(0,0)'
         })
-        $('.projects').each(function(i) {
-            setTimeout(function() {
-                $('.projects').eq(i).addClass('show');
-            }, 300 * (i + 1));
-        });
     };
 });
 
+$('.contact-item ul li:nth-child(4)').on('click', (e) => {
+    $('.modal').css({
+        'display': 'block'
+    })
+    e.preventDefault();
+})
+
+$('.discord-modal span').on('click', (e) => {
+    $('.modal').css({
+        'display': 'none'
+    })
+})
